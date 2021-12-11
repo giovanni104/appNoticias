@@ -1,0 +1,25 @@
+<ion-header [translucent]="true"  mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      Encabezados
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <ion-header collapse="condense"  mode="ios" class="ion-no-border"> 
+    <ion-toolbar>
+      <ion-title size="large">  Encabezados</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-segment value="pizza" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="pizza">
+      <ion-label>Pizza</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="pasta">
+      <ion-label>Pasta</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+</ion-content>
