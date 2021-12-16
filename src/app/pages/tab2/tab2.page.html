@@ -13,13 +13,20 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-segment value="pizza" (ionChange)="segmentChanged($event)">
-    <ion-segment-button value="pizza">
-      <ion-label>Pizza</ion-label>
+  <ion-segment [value]="selectedCategory" 
+  (ionChange)="segmentChanged($event)"
+  scrollable="true" mode="md"> 
+   
+  
+  <ion-segment-button 
+  *ngFor="let category of categories"
+  
+  [value]="category">
+      <ion-label class="ion-text-capitalize" >{{category}}</ion-label>
     </ion-segment-button>
-    <ion-segment-button value="pasta">
-      <ion-label>Pasta</ion-label>
-    </ion-segment-button>
+
+
+
   </ion-segment>
 
 </ion-content>
