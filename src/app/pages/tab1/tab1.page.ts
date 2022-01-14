@@ -14,7 +14,7 @@ public articles:Article[]=[];
   constructor(private newService: NewsService) { }
 
   ngOnInit() {
-    this.newService.getTopHeadLines()
+    this.newService.getTopHeadlines()
       .subscribe(articles => this.articles.push(...articles)    );
 
   }
